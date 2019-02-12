@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class RestartPos : MonoBehaviour
 {
-    public Vector3 startpos;
-
+    public Vector3 startPos;
     private void Awake()
     {
-        startpos = transform.position;
+        startPos = transform.position;
     }
-    public void restartPos()
+    // Update is called once per frame
+    void Update()
     {
-        print("sdsd");
-        transform.position = startpos;
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = startPos;
+        }
     }
 }
